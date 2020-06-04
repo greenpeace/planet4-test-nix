@@ -2,8 +2,7 @@ version: 2.1
 
 defaults: &defaults
   docker:
-    - image: greenpeaceinternational/p4-builder:develop
-
+    - image: greenpeaceinternational/p4-builder:latest
 job_environments:
   common_environment: &common_environment
     APP_HOSTPATH: test-nix
@@ -148,7 +147,6 @@ jobs:
       <<: *common_environment
       <<: *develop_environment
     <<: *backstop_compare_steps
-
   data-sync:
     <<: *defaults
     environment:
@@ -181,11 +179,10 @@ workflows:
           <<: *develop_common
       - build-branch:
           <<: *develop_common
-          requires:
-            - backstop-history-develop
       - deploy-develop:
           <<: *develop_common
           requires:
+            - backstop-history-develop
             - build-branch
       - data-sync:
           <<: *develop_common
