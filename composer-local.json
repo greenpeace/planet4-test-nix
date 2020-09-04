@@ -3,10 +3,9 @@
     "description": "Greenpeace P4 test-nix",
     "license": "MIT",
     "require": {
-        "greenpeace/planet4-master-theme" : "dev-master",
-        "greenpeace/planet4-child-theme-handbook" : "dev-planet-2282",
-        "greenpeace/planet4-plugin-gutenberg-blocks" : "dev-master",
-        "greenpeace/planet4-plugin-gutenberg-engagingnetworks" : "dev-master"
+        "greenpeace/planet4-master-theme" : "dev-sql-params-wrapper",
+        "greenpeace/planet4-child-theme-handbook" : "dev-master",
+        "greenpeace/planet4-plugin-gutenberg-blocks" : "dev-faster-blocks-report"
     },
     "data_from": "international",
     "scripts": {}
