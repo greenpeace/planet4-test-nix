@@ -3,10 +3,16 @@
     "description": "Greenpeace P4 test-nix",
     "license": "MIT",
     "require": {
-        "greenpeace/planet4-master-theme" : "dev-sql-params-wrapper",
-        "greenpeace/planet4-child-theme-handbook" : "dev-master",
-        "greenpeace/planet4-plugin-gutenberg-blocks" : "dev-faster-blocks-report"
+        "greenpeace/planet4-master-theme" : "dev-master",
+        "greenpeace/planet4-plugin-gutenberg-blocks" : "dev-master"
     },
     "data_from": "international",
-    "scripts": {}
+    "scripts": {
+        "core:deactivate_g_sitemap": "wp plugin deactivate google-sitemap-generator",
+		"core:update": "wp core update --version=5.5.1",
+		"site:custom": [
+			"@core:deactivate_g_sitemap",
+			"@core:update"
+		]
+    }
 }
