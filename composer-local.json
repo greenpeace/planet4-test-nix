@@ -9,10 +9,8 @@
     "data_from": "international",
     "scripts": {
         "core:deactivate_g_sitemap": "wp plugin deactivate google-sitemap-generator",
-		"core:update": "wp core update --version=5.5.1",
 		"site:custom": [
-			"@core:deactivate_g_sitemap",
-			"@core:update"
+			"@core:deactivate_g_sitemap"
 		]
     }
 }
