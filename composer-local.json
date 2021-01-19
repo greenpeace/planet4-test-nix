@@ -1,16 +1,42 @@
 {
-    "name": "greenpeace/planet4-test-nix",
-    "description": "Greenpeace P4 test-nix",
-    "license": "MIT",
-    "require": {
-        "greenpeace/planet4-master-theme" : "dev-planet-5774",
-        "greenpeace/planet4-plugin-gutenberg-blocks" : "dev-planet-5774"
-    },
-    "data_from": "denmark",
-    "scripts": {
-        "core:language": "wp language core install da_DK; wp language core activate da_DK",
+	"name": "greenpeace/planet4-test-nix",
+	"description": "Greenpeace P4 test-nix",
+	"license": "MIT",
+	"require": {
+		"greenpeace/planet4-master-theme": "7",
+		"greenpeace/planet4-plugin-gutenberg-blocks": "dev-planet-5774"
+	},
+	"data_from": "denmark",
+	"scripts": {
+		"core:language": "wp language core install da_DK; wp language core activate da_DK",
 		"site:custom": [
 			"@core:language"
 		]
-    }
+	},
+	"repositories": [
+		{
+			"type": "package",
+			"package": {
+				"name": "greenpeace/planet4-master-theme",
+				"type": "wordpress-theme",
+				"autoload": {
+					"psr-4": {
+						"P4\\MasterTheme\\": "src/"
+					}
+				},
+				"extra": {
+					"installer-paths": {
+						"vendor/plugins/{$name}/": [
+							"type:wordpress-plugin"
+						]
+					}
+				},
+				"version": 7,
+				"dist": {
+					"type": "zip",
+					"url": "https://storage.googleapis.com/planet4-packages/planet4-master-theme/f1d6265bd6f56992990f0a7a3224aaa3d119efc4.zip"
+				}
+			}
+		}
+	]
 }
