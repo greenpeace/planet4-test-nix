@@ -6,7 +6,7 @@
 		"greenpeace/planet4-master-theme": "7",
 		"greenpeace/planet4-plugin-gutenberg-blocks": "7"
 	},
-	"data_from": "denmark",
+	"data_from": "international",
 	"scripts": {
 		"core:language": "wp language core install da_DK; wp language core activate da_DK",
 		"site:custom": [
