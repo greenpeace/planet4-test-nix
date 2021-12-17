@@ -11,6 +11,5 @@ job_environments:
     GCLOUD_CLUSTER: p4-development
     HELM_NAMESPACE: develop
     HELM_RELEASE: planet4-test-nix
-    NEWRELIC_APPNAME: P4 test-nix Development
     WP_DB_NAME: planet4-testnix_wordpress_develop
     WP_STATELESS_BUCKET: planet4-test-nix-stateless-develop
