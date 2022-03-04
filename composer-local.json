@@ -3,7 +3,7 @@
 	"description": "Greenpeace P4 test-nix",
 	"license": "MIT",
 	"require": {
-		"greenpeace/planet4-master-theme": "dev-PLANET-6509_navigation_bar_drop_down_menues",
+		"greenpeace/planet4-master-theme": "7",
 		"greenpeace/planet4-plugin-gutenberg-blocks": "dev-master",
 		"wpackagist-plugin/post-type-switcher": "3.2.1"
 	},
@@ -14,5 +14,30 @@
 			"@core:language"
 		]
 	},
-	"repositories": []
+	"repositories": [
+		{
+			"type": "package",
+			"package": {
+				"name": "greenpeace/planet4-master-theme",
+				"type": "wordpress-theme",
+				"autoload": {
+					"psr-4": {
+						"P4\\MasterTheme\\": "src/"
+					}
+				},
+				"extra": {
+					"installer-paths": {
+						"vendor/plugins/{$name}/": [
+							"type:wordpress-plugin"
+						]
+					}
+				},
+				"version": 7,
+				"dist": {
+					"type": "zip",
+					"url": "https://storage.googleapis.com/planet4-packages/planet4-master-theme/42f00e81b07e94ad4e8d6f1a45da42c6b95f4bf0.zip"
+				}
+			}
+		}
+	]
 }
