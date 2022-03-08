@@ -7,7 +7,7 @@
 		"greenpeace/planet4-plugin-gutenberg-blocks": "dev-master",
 		"wpackagist-plugin/post-type-switcher": "3.2.1",
 		"plugins/gravityforms": "*",
-       		"plugins/gravityformsquiz": "*"
+		"plugins/gravityformsquiz": "*"
 	},
 	"data_from": "international",
 	"scripts": {
@@ -37,7 +37,7 @@
 				"version": 7,
 				"dist": {
 					"type": "zip",
-					"url": "https://storage.googleapis.com/planet4-packages/planet4-master-theme/e612349fe0616d2f249e852b07f30abc3afdc67b.zip"
+					"url": "https://storage.googleapis.com/planet4-packages/planet4-master-theme/5467f2499c402e7d2466e2b2683bb12c74d7060d.zip"
 				}
 			}
 		}
